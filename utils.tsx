@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import React from "react";
 
 export const useRenderCounter = () => {
-    const ref = useRef<HTMLSpanElement>(null);
-    useEffect(() => {
+    const ref = React.useRef<HTMLSpanElement>(null);
+    React.useEffect(() => {
         ref.current!.textContent = (Number(ref.current!.textContent || '0') + 1).toString();
     });
     return (
